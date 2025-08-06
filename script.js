@@ -61,7 +61,7 @@
 //         sum += i;
 //     }
 //     console.log(sum);
-    
+
 // }
 // sumRange(8, 10)
 
@@ -113,4 +113,141 @@
 
 //   return kv === K;
 // }
-// console.log(isPowerN(8, 2));  
+// console.log(isPowerN(8, 2));
+
+// ! 11-masala
+// let N = 7;
+// function isPrime() {
+//     if (N % 2 == 0) {
+//         console.log(true);
+//     } else {
+//         console.log(false)
+//     }
+// }
+// isPrime()
+
+// ! 12-masala
+// function isPrime(n) {
+//   if (n <= 1) 
+//     return false;
+//   for (let i = 2; i <= Math.sqrt(n); i++) {
+//     if (n % i === 0) 
+//     return false;
+//   }
+//   return true;
+// }
+// function numberOfPrime(N) {
+//   let count = 0;
+//   for (let i = 2; i <= N; i++) {
+//     if (isPrime(i)) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+// console.log(numberOfPrime(15)); 
+
+// ! 13-masala
+//! let N = 12349;
+//! let onMingliklar = Math.floor(N / 10000);
+//! let mingliklar = Math.floor (N / 1000) % 10;
+//! let yuzliklar = Math.floor (N / 100) % 10;
+//! let onliklar = Math.floor (N / 10) % 10
+//! let birliklar = Math.floor (N % 100) % 10;
+//! function inverseNumber() {
+
+// ! 16 - masala
+// let N = 4;
+// function factorial(){
+//     let count = 0;
+//     if (N  % 2 == 0){
+//         for (let i = 1; i < N; i++) {
+//         count++;
+//         count *= i;
+//         console.log(count);
+//         }
+//     } else {
+//         console.log(1);
+//     }
+
+// }
+// factorial()
+
+//! 17-masala
+// const getSum3 = N => {
+//   let sum = 0;
+//   for (let i = 3; i <= N; i += 3) sum += i;
+//   return sum;
+// };
+
+//! 18-masala
+// const sumOddEven = N => {
+//   let sumEven = 0, sumOdd = 0;
+//   for (let i = 1; i <= N; i++) {
+//     if (i % 2 === 0) sumEven += i;
+//     else sumOdd += i;
+//   }
+//   return [sumEven, sumOdd];
+// };
+
+//! 19-masala
+// const invertTime = (H, M, S) => H * 3600 + M * 60 + S;
+
+//! 21-masala
+// const decTime = (H, M, S) => {
+//   let total = invertTime(H, M, S) - 1;
+//   if (total < 0) total = 0;
+//   const h = Math.floor(total / 3600);
+//   const m = Math.floor((total % 3600) / 60);
+//   const s = total % 60;
+//   return ${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')};
+// };
+
+// Func21
+// const isLeapYear = Y => (Y % 4 === 0 && Y % 100 !== 0) || (Y % 400 === 0);
+
+// 22-masala
+// const monthDays = (M, Y) => {
+//   const daysInMonth = [31, isLeapYear(Y) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+//   return daysInMonth[M - 1];
+// };
+
+// 23-masala
+// const prevDate = (D, M, Y) => {
+//   D--;
+//   if (D === 0) {
+//     M--;
+//     if (M === 0) {
+//       M = 12;
+//       Y--;
+//     }
+//     D = monthDays(M, Y);
+//   }
+//   return ${D.toString().padStart(2, '0')}.${M.toString().padStart(2, '0')}.${Y};
+// };
+
+// 24-masala
+// const nextDate = (D, M, Y) => {
+//   D++;
+//   if (D > monthDays(M, Y)) {
+//     D = 1;
+//     M++;
+//     if (M > 12) {
+//       M = 1;
+//       Y++;
+//     }
+//   }
+//   return ${D.toString().padStart(2, '0')}.${M.toString().padStart(2, '0')}.${Y};
+// };
+
+// 25-masala
+// const getDividersNumberAndSum = N => {
+//   let count = 0, sum = 0;
+//   for (let i = 1; i <= N; i++) {
+//     if (N % i === 0) {
+//       count++;
+//       sum += i;
+//     }
+//   }
+//   return [count, sum];
+// };
